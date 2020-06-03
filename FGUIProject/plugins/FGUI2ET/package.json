@@ -1,0 +1,11 @@
+{
+  "name": "FGUI2ET",
+  "displayName": "FGUI2ET",
+  "description": "FairyGUI自动生成ET代码的插件",
+  "version": "1.0",
+  "author": {
+    "name": "DukeChiang"
+  },
+  "icon": "",
+  "main": "Main.lua"
+}

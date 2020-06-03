@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <image id="n1_n8hd" name="bg" src="n8hd1" fileName="Resource/model_bg_login.jpg" xy="0,0" size="1920,1080">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n17_hbe5" name="contentBG" src="hbe5d" fileName="Resource/model_bg_content.png" xy="703,398" size="514,283" group="n18_hbe5" alpha="0.9"/>
+    <image id="n9_hbe5" name="accountBg" src="hbe5f" fileName="Resource/model_bg_input.png" xy="840,450" size="240,30" group="n12_hbe5"/>
+    <text id="n10_hbe5" name="accountInput" xy="840,450" size="240,30" group="n12_hbe5" input="true" prompt="请输入账号" maxLength="6" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text=""/>
+    <group id="n12_hbe5" name="account" xy="840,450" size="240,30" group="n18_hbe5"/>
+    <image id="n13_hbe5" name="passwordBg" src="hbe5f" fileName="Resource/model_bg_input.png" xy="840,507" size="240,30" group="n15_hbe5"/>
+    <text id="n14_hbe5" name="passwordInput" xy="840,507" size="240,30" group="n15_hbe5" input="true" prompt="请输入密码" maxLength="12" password="true" fontSize="18" color="#ffffff" vAlign="middle" autoSize="none" text=""/>
+    <group id="n15_hbe5" name="password" xy="840,507" size="240,30" group="n18_hbe5"/>
+    <component id="n4_hbe5" name="loginButton" src="hbe5a" fileName="Component/TitleButton.xml" xy="873,580" group="n18_hbe5">
+      <Button title="登录"/>
+    </component>
+    <group id="n18_hbe5" name="content" xy="703,398" size="514,283" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

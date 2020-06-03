@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="173,74" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <image id="n0_hbe5" name="bg" src="hbe56" fileName="Resource/ui_model_bg_button_1.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_hbe5" name="title" xy="0,0" size="173,74" fontSize="21" color="#ffffff" align="center" vAlign="middle" autoSize="none" strokeColor="#333333" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.80"/>
+</component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <image id="n7_xzq9" name="bg" src="xzq9b" fileName="Resource/common_bg_loading.jpg" xy="0,0" size="1920,1080">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3_n8hd" name="loadingText" xy="560,993" size="800,25" fontSize="18" color="#ffffff" align="center" ubb="true" autoSize="none" strokeColor="#10001d" text="正在加载中">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </text>
+    <component id="n8_xzq9" name="loadingBar" src="xzq96" fileName="Component/LoadingProgressBar.xml" xy="560,960" size="800,22">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <ProgressBar value="100" max="100"/>
+    </component>
+  </displayList>
+</component>
