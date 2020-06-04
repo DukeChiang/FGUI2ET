@@ -225,9 +225,10 @@ local function genCode(handler)
 
     writer:writeln('public const string %s = "%s";',codePkgName,codePkgName)
 
-    for i=0,classCnt-1 do
-        local classInfo = classes[i]
-        writer:writeln('public const string %s_%s = "ui://%s/%s";',codePkgName,classInfo.resName,codePkgName,classInfo.resName)
+    -- 生成所有的
+    local itemCount = handler.items.Count
+    for i=0,itemCount-1 do
+        writer:writeln('public const string %s_%s = "ui://%s/%s";',codePkgName,handler.items[i].name,codePkgName,handler.items[i].name)
     end
 
 
