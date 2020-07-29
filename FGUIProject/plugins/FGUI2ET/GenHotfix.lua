@@ -135,14 +135,29 @@ local function genCode(handler)
             local typeName = memberInfo.type
             if memberInfo.group==0 then
                 if getMemberByName then
-                    if string.find(typeName,'FUI') then
-                        writer:writeln('\t\t%s = %s.Create(domain,com.GetChild("%s"));', memberInfo.varName, memberInfo.type, memberInfo.name)
+                    -- 判断是不是我们自定义类型
+                    local isCustomComponent = false
+                    for i = 0, classCnt - 1 do
+                        if typeName == classes[i].className then
+                            isCustomComponent = true
+                            break
+                        end
+                    end
+                    if isCustomComponent then
+                        writer:writeln('\t\t%s = %s.Create(com.GetChild("%s"));', memberInfo.varName, memberInfo.type, memberInfo.name)
                     else
                         writer:writeln('\t\t%s = (%s)com.GetChild("%s");', memberInfo.varName, memberInfo.type, memberInfo.name)
                     end
                 else
-                    if string.find(typeName,'FUI') then
-                        writer:writeln('\t\t%s = %s.Create(domain,com.GetChildAt("%s"));', memberInfo.varName, memberInfo.type, memberInfo.index)
+                    local isCustomComponent = false
+                    for i = 0, classCnt - 1 do
+                        if typeName == classes[i].className then
+                            isCustomComponent = true
+                            break
+                        end
+                    end
+                    if isCustomComponent then
+                        writer:writeln('\t\t%s = %s.Create(com.GetChildAt(%s));', memberInfo.varName, memberInfo.type, memberInfo.index)
                     else
                         writer:writeln('\t\t%s = (%s)com.GetChildAt(%s);', memberInfo.varName, memberInfo.type, memberInfo.index)
                     end
