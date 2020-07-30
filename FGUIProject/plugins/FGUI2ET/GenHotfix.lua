@@ -144,7 +144,7 @@ local function genCode(handler)
                         end
                     end
                     if isCustomComponent then
-                        writer:writeln('\t\t%s = %s.Create(com.GetChild("%s"));', memberInfo.varName, memberInfo.type, memberInfo.name)
+                        writer:writeln('\t\t%s = %s.Create(domain, com.GetChild("%s"));', memberInfo.varName, memberInfo.type, memberInfo.name)
                     else
                         writer:writeln('\t\t%s = (%s)com.GetChild("%s");', memberInfo.varName, memberInfo.type, memberInfo.name)
                     end
@@ -157,7 +157,7 @@ local function genCode(handler)
                         end
                     end
                     if isCustomComponent then
-                        writer:writeln('\t\t%s = %s.Create(com.GetChildAt(%s));', memberInfo.varName, memberInfo.type, memberInfo.index)
+                        writer:writeln('\t\t%s = %s.Create(domain, com.GetChildAt(%s));', memberInfo.varName, memberInfo.type, memberInfo.index)
                     else
                         writer:writeln('\t\t%s = (%s)com.GetChildAt(%s);', memberInfo.varName, memberInfo.type, memberInfo.index)
                     end
